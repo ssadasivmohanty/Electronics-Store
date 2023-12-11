@@ -1,13 +1,13 @@
-package com.example.esotrebackend;
+package org.example.estorebackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EsotreBackendApplicationTests {
+class EStoreBackendApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
