@@ -16,6 +16,11 @@ public class User {
     private String lastName;
     private String email;
     private String password;
+    private String user_type;
+    private String phone;
+    private String gender;
+    private String dob;
+
 
     // Constructors, getters, setters
 }

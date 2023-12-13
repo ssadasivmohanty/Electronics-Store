@@ -1,4 +1,4 @@
-package org.example.estorebackend.Service;
+package org.example.estorebackend.service;
 
 import org.example.estorebackend.model.User;
 import org.example.estorebackend.repository.UserRepository;
@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements org.example.estorebackend.service.UserService {

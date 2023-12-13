@@ -1,6 +1,7 @@
 package org.example.estorebackend.controller;
 
 import org.example.estorebackend.model.User;
+import org.example.estorebackend.repository.UserRepository;
 import org.example.estorebackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
