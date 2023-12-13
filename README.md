@@ -44,3 +44,31 @@ To get a local copy of the project up and running, follow the steps below.
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/electronics-shop.git
+2.Navigate to the backend directory:
+    cd electronics-shop/backend
+3.Configure the database:
+  Create a MySQL database and update the application.properties file with the database connection details.
+4.Build and run the backend:
+    ./mvnw spring-boot:run
+### Frontend Setup
+1. Navigate to the frontend directory:
+    cd electronics-shop/frontend
+2.Install dependencies:
+    npm install
+3.Run the frontend:
+    ng serve
+4.Open your browser and visit http://localhost:4200/
+
+## Usage
+Visit the application in your browser.
+Create a new account or log in if you already have one.
+Explore the available products, buy new products, and list your old products for sale.
+Navigate to your user dashboard to manage your account and transactions.
+
+## Contributing
+Contributions are welcome! Fork the repository, create a branch, make your changes, and submit a pull request.
+
+## License
+This project is licensed under the MIT License.
+Copy the entire content above and paste it into your README.md file.
+
