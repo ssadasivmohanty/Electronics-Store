@@ -11,11 +11,17 @@ export class LoginComponent implements OnInit {
   username: string = '';
   password: string = '';
   errorMessage: string = '';
+  // showPassword: boolean = false;
+
+  
 
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
+  // togglePasswordVisibility() {
+  //   this.showPassword = !this.showPassword;
+  // }
   onSubmit(): void {
     this.authService.login(this.username, this.password).subscribe(
       (response) => {

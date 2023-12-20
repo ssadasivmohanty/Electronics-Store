@@ -14,7 +14,7 @@ export class AuthService {
   private apiUrl: string =this.apiService.getApiUrl() ;
   
   login(username: string, password: string): Observable<any> {
-    const url = `${this.apiUrl}/login`;
+    const url = `${this.apiUrl}/api/auth/login`;
     console.log(url);
     // Replace the following line with your actual login API endpoint
     return this.http.post<any>(url, { username, password });
