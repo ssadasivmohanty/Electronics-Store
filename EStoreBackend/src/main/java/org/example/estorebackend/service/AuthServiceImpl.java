@@ -1,11 +1,14 @@
 package org.example.estorebackend.service;
 import org.example.estorebackend.model.User;
 import org.example.estorebackend.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 @Service
 public class AuthServiceImpl implements AuthService {
+    @Autowired
+    UserRepository userRepository;
 
     // Simulated database (replace this with actual database logic)
     private static final Map<String, String> userCredentials = new HashMap<>();
@@ -18,15 +21,10 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public User login(String username, String password) {
         // Simulated authentication logic (replace this with actual authentication logic)
-
-        System.out.println("AuthServImp-------------------------");
-        if (userCredentials.containsKey(username) && userCredentials.get(username).equals(password)) {
-            User user = new User();
-            System.out.println(user);
-            user.setUsername(username);
+        User user= userRepository.getUserByUsername(username);
+        if (user != null && user.getPassword().equals(password)) {
             return user;
-        } else {
-            return null; // Authentication failed
         }
+         return  null;
     }
 }

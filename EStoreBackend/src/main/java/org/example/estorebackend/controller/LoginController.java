@@ -27,17 +27,13 @@ public class LoginController {
     public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
         String username = credentials.get("username");
         String password = credentials.get("password");
-        System.out.println(username);
-        System.out.println(password);
         User authenticatedUser = authService.login(username, password);
-
         if (authenticatedUser != null) {
             // Authentication successful
-            System.out.println("authenticatedUser != null--------------------------");
-            return ResponseEntity.ok().body(authenticatedUser);
+            return ResponseEntity.ok().body(Map.of("user", authenticatedUser, "status", 200));
         } else {
             // Authentication failed
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("status", 401));
         }
     }
 }
