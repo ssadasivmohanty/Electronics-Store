@@ -13,6 +13,8 @@ import { LandingComponent } from './landing/landing.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { RegisterComponent } from './register/register.component';
     SignupComponent,
     LandingComponent,
     UserListComponent,
-    RegisterComponent
+    RegisterComponent,
+    AdminDashboardComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,

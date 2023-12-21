@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { LandingComponent } from './landing/landing.component';
 import { RegisterComponent } from './register/register.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,12 @@ const routes: Routes = [
   },
   {
     path:'register', component:RegisterComponent,
+  },
+  {
+    path:'dashboard', component:UserDashboardComponent,
+  },
+  {
+    path:'admin-dashboard', component:AdminDashboardComponent,
   }
 ];
 

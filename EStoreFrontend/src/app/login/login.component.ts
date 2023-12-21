@@ -11,7 +11,6 @@ export class LoginComponent implements OnInit {
   username: string = '';
   password: string = '';
   errorMessage: string = '';
-  // showPassword: boolean = false;
 
   
 
@@ -19,16 +18,19 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // togglePasswordVisibility() {
-  //   this.showPassword = !this.showPassword;
-  // }
   onSubmit(): void {
     this.authService.login(this.username, this.password).subscribe(
-      (response) => {
-        // Check the response from the server, e.g., if authentication is successful
-        if (response.success) {
+      (response:any) => {
+        console.log(response.user.user_type);
+        
+        if (response.status === 200) {
           // Redirect to the dashboard
-          this.router.navigate(['/dashboard']);
+          if(response.user.user_type === "admin"){
+            this.router.navigate(['/admin-dashboard']);
+          }
+          else{
+            this.router.navigate(['/dashboard']);
+          }
         } else {
           this.errorMessage = 'Invalid username or password';
         }
