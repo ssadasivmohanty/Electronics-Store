@@ -1,0 +1,32 @@
+/* Add this to your styles or CSS file */
+.bg {
+    background-image: url('https://png.pngtree.com/background/20230528/original/pngtree-room-in-a-huge-office-picture-image_2781724.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(37, 26, 26); /* Set text color to be visible on the background */
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: auto;
+    border-radius: 2%;
+  }
+  input {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .larger-button {
+    width: 100%; /* Set the width to 100% of the container */
+    padding: 10px; /* Adjust the padding as needed */
+    font-size: 1.2em; /* Adjust the font size as needed */
+  }

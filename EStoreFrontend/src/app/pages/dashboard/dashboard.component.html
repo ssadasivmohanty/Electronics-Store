@@ -1,0 +1,27 @@
+<!-- <p>dashboard works!</p> -->
+<app-sidebar></app-sidebar>
+<app-navbar></app-navbar>
+<div>
+  <div class="container py-5" *ngIf="productData">
+    <div class="row">
+      <div *ngFor="let product of productData" class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img
+            class="card-img-top"
+            height="500px"
+            width="100px"
+            src="{{ product.image }}"
+            alt="{{ product.title }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary btn-block">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
