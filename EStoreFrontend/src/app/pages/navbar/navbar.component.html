@@ -1,9 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" routerLink="/">Electronics Store</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+  <a class="navbar-brand" routerLink="/"
+    ><img
+      src="../../../assets/ecommerce.jpg"
+      style="width: 35px; height: auto"
+      alt=""
+  /></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" style="display: flex; justify-content: space-between;">
+    <div class="d-flex">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="/dashboard">Home</a>
@@ -17,5 +31,17 @@
       </ul>
     </div>
 
-  </nav>
-  
+    <div class="navbar-nav d-flex ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/cart">
+          <i class="bi bi-cart-fill"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+      </li>
+    </div>
+  </div>
+</nav>
