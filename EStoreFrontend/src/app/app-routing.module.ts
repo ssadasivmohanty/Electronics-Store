@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { LandingComponent } from './landing/landing.component';
-import { RegisterComponent } from './register/register.component';
-import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { LoginComponent } from './pages/login/login.component';
+import { UserListComponent } from './pages/user-list/user-list.component';
+import { LandingComponent } from './pages/landing/landing.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AboutComponent } from './pages/about/about.component';
 
 
 const routes: Routes = [
@@ -22,10 +24,13 @@ const routes: Routes = [
     path:'register', component:RegisterComponent,
   },
   {
-    path:'dashboard', component:UserDashboardComponent,
+    path:'dashboard', component:DashboardComponent,
   },
   {
     path:'admin-dashboard', component:AdminDashboardComponent,
+  },
+  {
+    path:'about', component:AboutComponent,
   }
 ];
 
