@@ -8,6 +8,7 @@ import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.co
 import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AboutComponent } from './pages/about/about.component';
+import { UserProfilePopupComponent } from './user-profile-popup/user-profile-popup.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,11 @@ const routes: Routes = [
   },
   {
     path:'about', component:AboutComponent,
+  },
+  {
+    path: 'user-profile-popup', component:UserProfilePopupComponent
   }
+
 ];
 
 @NgModule({

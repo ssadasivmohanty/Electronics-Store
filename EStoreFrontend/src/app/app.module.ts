@@ -18,6 +18,7 @@ import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.co
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { UserProfilePopupComponent } from './user-profile-popup/user-profile-popup.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FooterComponent } from './pages/footer/footer.component';
     UserDashboardComponent,
     NavbarComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    UserProfilePopupComponent
   ],
   imports: [
     BrowserModule,
