@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { UserListService } from '../../services/user-list.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
@@ -9,7 +10,7 @@ import { UserListService } from '../../services/user-list.service';
 })
 export class UserListComponent implements OnInit {
   users: any[] = [];
-  constructor(private userListService : UserListService) { }
+  constructor(private userListService : UserListService, private router:Router) { }
 
   ngOnInit(): void {
     this.getUsers();
@@ -28,10 +29,18 @@ export class UserListComponent implements OnInit {
 
   getUserById(id:number){
     this.userListService.getUserById(id).subscribe(
-      
+      ()=>{
+        // this.router.navigate(['/edit', id]);
+      }
     );
-    console.log("Got user",id);
-    
+    // console.log("Got user",id);
+  }
+  deleteUser(id:number){
+    this.userListService.deleteUser(id).subscribe(
+      ()=>{
+        this.users = this.users.filter(user => user.id !== id);
+      }
+      );
   }
 
 }
