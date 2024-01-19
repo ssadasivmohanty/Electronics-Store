@@ -1,16 +1,26 @@
 <app-navbar></app-navbar>
 
-<table class="table">
-  <thead>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Action</th>
-  </thead>
-  <tr *ngFor="let user of users">
-    <td>{{ user.username }}</td>
-    <td>{{ user.email }}</td>
-    <td><button (click)="getUserById(user.id)">View</button></td>
-  </tr>
-</table>
+<div class="container">
+  <table class="table table-striped">
+    <thead >
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Action</th>
+    </thead>
+    <tr *ngFor="let user of users">
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td style="display: flex">
+        <button class="btn btn-primary" (click)="getUserById(user.id)">
+          Edit
+        </button>
+        <button class="btn btn-danger" (click)="deleteUser(user.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
+
 
 <app-footer></app-footer>
