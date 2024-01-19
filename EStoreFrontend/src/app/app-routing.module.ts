@@ -12,13 +12,16 @@ import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
   {
+    path:'',  redirectTo: '/home', pathMatch: 'full'
+  },
+  {
     path:'login', component:LoginComponent,
   },
   {
     path:'userlist', component:UserListComponent,
   },
   {
-    path:'landing', component:LandingComponent,
+    path:'home', component:LandingComponent,
   },
   {
     path:'register', component:RegisterComponent,

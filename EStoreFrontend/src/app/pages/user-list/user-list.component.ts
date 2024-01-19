@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { UserListService } from './user-list.service';
+import { UserListService } from '../../services/user-list.service';
 
 @Component({
   selector: 'app-user-list',
@@ -12,6 +12,9 @@ export class UserListComponent implements OnInit {
   constructor(private userListService : UserListService) { }
 
   ngOnInit(): void {
+    this.getUsers();
+  }
+  getUsers(){
     this.userListService.getUsers().subscribe(
       (data: any[]) => {
         this.users = data;
@@ -21,6 +24,14 @@ export class UserListComponent implements OnInit {
         console.error('Error fetching users:', error);
       }
     );
+  }
+
+  getUserById(id:number){
+    this.userListService.getUserById(id).subscribe(
+      
+    );
+    console.log("Got user",id);
+    
   }
 
 }

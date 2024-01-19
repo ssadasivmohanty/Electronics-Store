@@ -1,7 +1,16 @@
-<p>user-list works!</p>
-<div *ngFor="let user of users">
-    <!-- Display user information here -->
-    <p>{{ user.name }}</p>
-    <p>{{ user.email }}</p>
-    <!-- Add other properties as needed -->
-  </div>
+<app-navbar></app-navbar>
+
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Action</th>
+  </thead>
+  <tr *ngFor="let user of users">
+    <td>{{ user.username }}</td>
+    <td>{{ user.email }}</td>
+    <td><button (click)="getUserById(user.id)">View</button></td>
+  </tr>
+</table>
+
+<app-footer></app-footer>
