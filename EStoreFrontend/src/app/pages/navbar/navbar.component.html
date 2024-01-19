@@ -38,9 +38,9 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/profile"
-          ><i class="bi bi-person-circle"></i
-        ></a>
+        <a class="nav-link" (click)="openUserProfilePopup()"
+          ><i class="bi bi-person-circle mr-1"></i
+        >{{userName}}</a>
       </li>
     </div>
   </div>
