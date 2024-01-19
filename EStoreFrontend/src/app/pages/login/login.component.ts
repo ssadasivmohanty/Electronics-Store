@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
         console.log(response.user.user_type);
         
         if (response.status === 200) {
+          localStorage.setItem("username",response.user);
           // Redirect to the dashboard
           if(response.user.user_type === "admin"){
             this.router.navigate(['/admin-dashboard']);
