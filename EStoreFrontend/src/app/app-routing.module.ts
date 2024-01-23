@@ -13,16 +13,13 @@ import { UserProfilePopupComponent } from './user-profile-popup/user-profile-pop
 
 const routes: Routes = [
   {
-    path:'',  redirectTo: '/home', pathMatch: 'full'
-  },
-  {
     path:'login', component:LoginComponent,
   },
   {
     path:'userlist', component:UserListComponent,
   },
   {
-    path:'home', component:LandingComponent,
+    path:'landing', component:LandingComponent,
   },
   {
     path:'register', component:RegisterComponent,
@@ -39,7 +36,6 @@ const routes: Routes = [
   {
     path: 'user-profile-popup', component:UserProfilePopupComponent
   }
-
 ];
 
 @NgModule({

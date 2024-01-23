@@ -21,10 +21,8 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     this.authService.login(this.username, this.password).subscribe(
       (response:any) => {
-        console.log(response.user.user_type);
-        
+        // console.log(response.user.username);
         if (response.status === 200) {
-          localStorage.setItem("username",response.user);
           // Redirect to the dashboard
           if(response.user.user_type === "admin"){
             this.router.navigate(['/admin-dashboard']);
@@ -32,6 +30,7 @@ export class LoginComponent implements OnInit {
           else{
             this.router.navigate(['/dashboard']);
           }
+          localStorage.setItem("username",response.user.username)
         } else {
           this.errorMessage = 'Invalid username or password';
         }
