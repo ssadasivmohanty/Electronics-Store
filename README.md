@@ -1,4 +1,4 @@
-# Electronics Shop Application
+# Electronics Shop
 
 The Electronics Shop is an online platform that allows users to buy new products and sell old products. The application is built using Java for the backend and Angular for the frontend.
 
