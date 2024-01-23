@@ -2,10 +2,11 @@
 
 <div class="container">
   <table class="table table-striped">
-    <thead >
+    <thead>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Action</th>
+      <th scope="col">Make Admin</th>
     </thead>
     <tr *ngFor="let user of users">
       <td>{{ user.username }}</td>
@@ -18,9 +19,15 @@
           Delete
         </button>
       </td>
+      <td>
+        <input
+          type="checkbox"
+          [checked]="user.user_type === 'admin'"
+          (change)="updateUserType(user.id,user.user_type)"
+        />
+      </td>
     </tr>
   </table>
 </div>
-
 
 <app-footer></app-footer>

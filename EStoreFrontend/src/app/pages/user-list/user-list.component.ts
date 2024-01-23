@@ -10,11 +10,28 @@ import { Router } from '@angular/router';
 })
 export class UserListComponent implements OnInit {
   users: any[] = [];
+  
   constructor(private userListService : UserListService, private router:Router) { }
 
   ngOnInit(): void {
     this.getUsers();
   }
+
+  updateUserType(userId:number,userType:string): void {
+    console.log(userId,userType,"---------------------------");
+    const updatedUser = { user_type: userType === 'admin' ? 'user' : 'admin' };
+
+    this.userListService.updateUser(userId, updatedUser)
+      .subscribe(
+        (response) => {
+          console.log("User updated successfully:", response);
+        },
+        (error) => {
+          console.error("Error updating user:", error);
+        }
+      );
+  }
+
   getUsers(){
     this.userListService.getUsers().subscribe(
       (data: any[]) => {
@@ -35,6 +52,7 @@ export class UserListComponent implements OnInit {
     );
     // console.log("Got user",id);
   }
+
   deleteUser(id:number){
     this.userListService.deleteUser(id).subscribe(
       ()=>{
