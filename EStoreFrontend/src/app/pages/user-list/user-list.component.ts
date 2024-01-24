@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { UserListService } from './user-list.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/User';
+import { UserListService } from 'src/app/services/user-list.service';
 
 @Component({
   selector: 'app-user-list',
@@ -10,17 +11,18 @@ import { Router } from '@angular/router';
 })
 export class UserListComponent implements OnInit {
   users: any[] = [];
-  
+  user:User | undefined;
   constructor(private userListService : UserListService, private router:Router) { }
 
   ngOnInit(): void {
     this.getUsers();
   }
 
-  updateUserType(userId:number,userType:string): void {
-    console.log(userId,userType,"---------------------------");
+  updateUserType(userId:number,userType:string ): void {
     const updatedUser = { user_type: userType === 'admin' ? 'user' : 'admin' };
-
+    console.log(this.getUserById(userId),"-----------------------");
+    this.getUserById(userId);
+    console.log(this.user);
     this.userListService.updateUser(userId, updatedUser)
       .subscribe(
         (response) => {
@@ -46,8 +48,12 @@ export class UserListComponent implements OnInit {
 
   getUserById(id:number){
     this.userListService.getUserById(id).subscribe(
-      ()=>{
-        // this.router.navigate(['/edit', id]);
+      (user: User) => {
+        this.user = user;
+        console.log("Got user:", user);
+      },
+      (error) => {
+        console.error("Error fetching user:", error);
       }
     );
     // console.log("Got user",id);

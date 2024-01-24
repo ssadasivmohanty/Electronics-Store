@@ -12,9 +12,13 @@
       <td>{{ user.username }}</td>
       <td>{{ user.email }}</td>
       <td style="display: flex">
-        <button class="btn btn-primary" (click)="getUserById(user.id)">
-          Edit
-        </button>
+        <!-- <a [routerLink]="/edit/(user.id)"> -->
+          <!-- (click)="getUserById(user.id)" -->
+          <button class="btn btn-primary"  >
+            Edit
+          </button>
+        <!-- </a> -->
+        
         <button class="btn btn-danger" (click)="deleteUser(user.id)">
           Delete
         </button>
