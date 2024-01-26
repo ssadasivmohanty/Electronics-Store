@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +10,7 @@ export class DashboardComponent implements OnInit {
   private apiUrl: string = 'https://fakestoreapi.com/products'; 
   public myVar: number =12;
   public productData: any;
-  constructor(private http:HttpClient,private productService:ProductService) { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
     this.products();
