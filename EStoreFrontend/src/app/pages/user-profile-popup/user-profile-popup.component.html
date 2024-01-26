@@ -1,0 +1,11 @@
+  <div class="modal-header">
+    <h4 class="modal-title">User Profile</h4>
+  </div>
+  <div class="modal-body">
+    <p>Welcome, {{ userName }}!</p>
+    <button (click)="logout()">LogOut</button>
+    <!-- Add your profile details and logout button here -->
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="activeModal.close('Close click')">Close</button>
+  </div>
