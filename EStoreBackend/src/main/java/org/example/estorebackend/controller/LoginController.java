@@ -28,9 +28,17 @@ public class LoginController {
         String username = credentials.get("username");
         String password = credentials.get("password");
         User authenticatedUser = authService.login(username, password);
+//        if (authenticatedUser != null) {
+//            // Authentication successful
+//            return ResponseEntity.ok().body(Map.of("user", authenticatedUser, "status", 200));
+//        } else {
+//            // Authentication failed
+//            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("status", 401));
+//        }
         if (authenticatedUser != null) {
             // Authentication successful
-            return ResponseEntity.ok().body(Map.of("user", authenticatedUser, "status", 200));
+            String token = authService.generateToken(authenticatedUser);
+            return ResponseEntity.ok().body(Map.of("user", authenticatedUser, "token", token, "status", 200));
         } else {
             // Authentication failed
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("status", 401));
