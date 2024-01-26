@@ -6,6 +6,7 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent implements OnInit {
   userName:string | null=localStorage.getItem("username");
   constructor() { }

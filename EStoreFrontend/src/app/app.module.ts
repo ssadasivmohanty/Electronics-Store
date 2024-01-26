@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -31,8 +31,9 @@ import { UserProfilePopupComponent } from './user-profile-popup/user-profile-pop
     NavbarComponent,
     AboutComponent,
     FooterComponent,
-    UserProfilePopupComponent
+    UserProfilePopupComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -41,7 +42,9 @@ import { UserProfilePopupComponent } from './user-profile-popup/user-profile-pop
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    NgbActiveModal,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

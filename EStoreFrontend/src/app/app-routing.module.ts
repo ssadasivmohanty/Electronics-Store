@@ -7,6 +7,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AboutComponent } from './pages/about/about.component';
 import { UserProfilePopupComponent } from './user-profile-popup/user-profile-popup.component';
+import { ProductAddComponent } from './pages/product-add/product-add.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,12 @@ const routes: Routes = [
   },
   {
     path: 'user-profile-popup', component:UserProfilePopupComponent
+  },
+  {
+    path: 'product-add', component:ProductAddComponent
+  },
+  {
+    path: 'profile', component:UserProfilePopupComponent
   }
 ];
 

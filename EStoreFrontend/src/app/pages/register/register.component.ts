@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserListService } from '../user-list/user-list.service';
 import { Router } from '@angular/router';
+import { UserListService } from 'src/app/services/user-list.service';
 
 @Component({
   selector: 'app-register',
