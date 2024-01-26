@@ -16,7 +16,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './pages/footer/footer.component';
-import { UserProfilePopupComponent } from './user-profile-popup/user-profile-popup.component';
+import { UserProfilePopupComponent } from './pages/user-profile-popup/user-profile-popup.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UserProfilePopupComponent } from './user-profile-popup/user-profile-pop
     AboutComponent,
     FooterComponent,
     UserProfilePopupComponent,
+    ContactComponent,
   ],
 
   imports: [

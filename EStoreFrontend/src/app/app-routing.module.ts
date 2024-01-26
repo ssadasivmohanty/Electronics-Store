@@ -6,8 +6,9 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AboutComponent } from './pages/about/about.component';
-import { UserProfilePopupComponent } from './user-profile-popup/user-profile-popup.component';
+import { UserProfilePopupComponent } from './pages/user-profile-popup/user-profile-popup.component';
 import { ProductAddComponent } from './pages/product-add/product-add.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,9 @@ const routes: Routes = [
   },
   {
     path: 'profile', component:UserProfilePopupComponent
+  },
+  {
+    path: 'contact', component:ContactComponent
   }
 ];
 
