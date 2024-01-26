@@ -4,4 +4,5 @@ import org.example.estorebackend.model.User;
 
 public interface AuthService {
     User login(String username, String password);
+    String generateToken(User user);
 }
