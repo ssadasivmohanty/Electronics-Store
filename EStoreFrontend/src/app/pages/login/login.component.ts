@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
           }
           localStorage.setItem("username",response.user.username);
           localStorage.setItem("token",response.token);
-          
         } else {
           this.errorMessage = 'Invalid username or password';
         }

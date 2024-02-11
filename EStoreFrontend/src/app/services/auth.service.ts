@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
+
    // Replace with your backend API URL
   private apiUrl: string =this.apiService.getApiUrl() ;
   private baseUrl =`${this.apiUrl}/api/auth`;
@@ -18,7 +19,16 @@ export class AuthService {
   login(username: string, password: string): Observable<any> {
     const url = `${this.baseUrl}/login`;
     this.userName=username;
-    // Replace the following line with your actual login API endpoint
     return this.http.post<any>(url, { username, password });
+  }
+
+  isLoggedIn() {
+    const token = localStorage.getItem('token');
+
+    // Check if token exists and is not expired (you need to implement this logic)
+    console.log(token);
+    
+
+    // return false;
   }
 }
